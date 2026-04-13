@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y Reservas - Tavola Italiana</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: #f5d08a; color: #222; }
+
+        /* NAVBAR (Mantenemos tu estilo) */
+        header {
+            background-color: #e6b866;
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            padding: 18px;
+            font-weight: bold;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        header a { text-decoration: none; color: #a16207; font-size: 18px; transition: 0.3s; }
+        header a:hover { color: #000; }
+
+        /* CONTENEDOR PRINCIPAL */
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .info-side h2 { font-family: 'Playfair Display', serif; font-size: 32px; color: #a16207; margin-bottom: 20px; }
+        .info-side p { margin-bottom: 15px; color: #555; }
+        .info-side i { color: #d97706; margin-right: 10px; width: 20px; }
+
+        /* FORMULARIO */
+        .form-side h2 { font-family: 'Playfair Display', serif; margin-bottom: 20px; }
+        .form-group { margin-bottom: 15px; position: relative; }
+        label { display: block; font-size: 14px; margin-bottom: 5px; font-weight: 600; }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus { border-color: #d97706; box-shadow: 0 0 5px rgba(217, 119, 6, 0.3); }
+
+        .error-msg { color: #dc2626; font-size: 12px; margin-top: 4px; display: none; }
+        
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #d97706;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+        button:hover { background-color: #a16207; transform: translateY(-2px); }
+
+        /* RESPONSIVE */
+        @media(max-width: 768px) {
+            .container { grid-template-columns: 1fr; margin: 20px; padding: 25px; }
+            header { gap: 20px; font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html">HOME</a>
+    <a href="menucorazon.html">MENÚ</a>
+    <a>TAVOLA ITALIANA</a>
+    <a href="ContactoyReservas.html">CONTACTO Y RESERVA</a>
+</header>
+
+<div class="container">
+    <div class="info-side">
+        <h2>Visítanos</h2>
+        <p>Disfruta de la auténtica experiencia italiana en el corazón de la ciudad.</p>
+        <p><i class="fas fa-location-dot"></i> Calle de la Pasta 123, Roma</p>
+        <p><i class="fas fa-phone"></i> +57 300 123 4567</p>
+        <p><i class="fas fa-clock"></i> Mar - Dom: 12:00 PM - 10:00 PM</p>
+        
+        <div style="margin-top: 30px;">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=400" alt="Restaurante" style="width: 100%; border-radius: 15px;">
+        </div>
+    </div>
+
+    <div class="form-side">
+        <h2>Reserva tu mesa</h2>
+        <form id="reservaForm">
+            <div class="form-group">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" placeholder="Ej. Juan Pérez">
+                <span class="error-msg" id="error-nombre">El nombre debe tener al menos 3 caracteres.</span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" placeholder="juan@correo.com">
+                <span class="error-msg" id="error-email">Introduce un correo válido.</span>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha">Fecha de la Reserva</label>
+                <input type="date" id="fecha">
+                <span class="error-msg" id="error-fecha">La fecha no puede ser en el pasado.</span>
+            </div>
+
+            <div class="form-group">
+                <label for="personas">Número de Personas</label>
+                <select id="personas">
+                    <option value="">Seleccione...</option>
+                    <option value="1">1 Persona</option>
+                    <option value="2">2 Personas</option>
+                    <option value="3">3 Personas</option>
+                    <option value="4">4 Personas</option>
+                    <option value="5+">Más de 4 (Grupo)</option>
+                </select>
+                <span class="error-msg" id="error-personas">Selecciona el número de asistentes.</span>
+            </div>
+
+            <button type="submit">Confirmar Reserva</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById('reservaForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Evita que se envíe el formulario si hay errores
+        
+        let isValid = true;
+
+        // Validar Nombre
+        const nombre = document.getElementById('nombre');
+        if (nombre.value.trim().length < 3) {
+            document.getElementById('error-nombre').style.display = 'block';
+            isValid = false;
+        } else {
+            document.getElementById('error-nombre').style.display = 'none';
+        }
+
+        // Validar Email (Regex básica)
+        const email = document.getElementById('email');
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email.value)) {
+            document.getElementById('error-email').style.display = 'block';
+            isValid = false;
+        } else {
+            document.getElementById('error-email').style.display = 'none';
+        }
+
+        // Validar Fecha (No pasado)
+        const fecha = document.getElementById('fecha');
+        const hoy = new Date().toISOString().split('T')[0];
+        if (!fecha.value || fecha.value < hoy) {
+            document.getElementById('error-fecha').style.display = 'block';
+            isValid = false;
+        } else {
+            document.getElementById('error-fecha').style.display = 'none';
+        }
+
+        // Validar Personas
+        const personas = document.getElementById('personas');
+        if (personas.value === "") {
+            document.getElementById('error-personas').style.display = 'block';
+            isValid = false;
+        } else {
+            document.getElementById('error-personas').style.display = 'none';
+        }
+
+        if (isValid) {
+            alert('¡Gracias, ' + nombre.value + '! Tu reserva para el ' + fecha.value + ' ha sido enviada con éxito.');
+            this.reset(); // Limpia el formulario
+        }
+    });
+</script>
+
+</body>
+</html>
