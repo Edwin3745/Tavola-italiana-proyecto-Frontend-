@@ -9,6 +9,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
 <style>
+    .logo {
+    height: 100px;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +31,7 @@ body {
 
 /* NAVBAR */
 header {
-    background: linear-gradient(90deg, #e6b866, #f2c078);
+    background-color: #ddb058;
     display: flex;
     justify-content: center;
     gap: 60px;
@@ -37,6 +45,9 @@ header a {
     text-decoration: none;
     color: #a16207;
     transition: 0.3s;
+
+    display: flex;
+    align-items: center;
 }
 
 header a:hover {
@@ -209,7 +220,9 @@ header a:hover {
 <header>
     <a href="index.html">HOME</a>
     <a href="menucorazon.html">MENÚ</a>
-    <a>TAVOLA ITALIANA</a>
+    <a href="index.html">
+    <img src="img/logo.png" alt="Tavola Italiana" class="logo">
+</a>
     <a href="ContactoyReservas.html">CONTACTO Y RESERVA</a>
 </header>
 

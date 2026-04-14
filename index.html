@@ -7,6 +7,14 @@
   <title>Tavola Italiana</title>
 
   <style>
+   .logo {
+    height: 100px;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
     * {
         margin: 0;
         padding: 0;
@@ -20,7 +28,7 @@
 
     /* NAVBAR */
     header {
-        background-color: #e6b866;
+        background-color: #ddb058;
         display: flex;
         justify-content: center;
         gap: 60px;
@@ -29,10 +37,16 @@
     }
 
     header a {
-        text-decoration: none;
-        color: #d97706;
-        font-size: 18px;
-    }
+    text-decoration: none;
+    color: #a16207;
+    transition: 0.3s;
+
+    display: flex;
+    align-items: center;
+}
+ header a:hover {
+        color: #000;
+      }
 
     /* HERO */
     .hero {
@@ -90,9 +104,11 @@
 
 <header>
     <a href="#">HOME</a>
-    <a href="menu.html">MENÚ</a>
-    <a href="#">TAVOLA ITALIANA</a>
-    <a href="#">CONTACTO Y RESERVA</a>
+    <a href="menucorazon.html">MENÚ</a>
+    <a href="index.html">
+    <img src="img/logo.png" alt="Tavola Italiana" class="logo">
+</a>
+    <a href="ContactoyReservas.html">CONTACTO Y RESERVA</a>
 </header>
 
 <section class="hero">
