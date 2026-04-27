@@ -1,0 +1,30 @@
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url('https://images.unsplash.com/photo-1608756687911-aa1599ab3bd9') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    color: black;
+    text-shadow: 2px 2px 0 white;
+}
+
+.hero h1 span {
+    display: block;
+}
+
+.social {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 24px;
+    color: #d97706;
+}

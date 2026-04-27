@@ -1,0 +1,17 @@
+<section class="hero-menu">
+  <h1>Nuestro menú</h1>
+</section>
+
+<section class="section">
+  <div *ngFor="let categoria of menuData">
+    <h2>{{ categoria.categoria }}</h2>
+    
+    <div class="grid">
+      <div class="card" *ngFor="let item of categoria.items">
+        <h3>{{ item.nombre }}</h3>
+        <p>{{ item.descripcion }}</p>
+        <div class="price">{{ formatPrice(item.precio) }}</div>
+      </div>
+    </div>
+  </div>
+</section>

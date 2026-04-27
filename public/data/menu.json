@@ -1,0 +1,168 @@
+[
+  {
+    "categoria": "Entradas (Antipasti)",
+    "items": [
+      {
+        "nombre": "Bruschetta Clásica",
+        "descripcion": "Pan tostado con tomate fresco, albahaca y aceite de oliva.",
+        "precio": 18000
+      },
+      {
+        "nombre": "Carpaccio de Res",
+        "descripcion": "Láminas finas de res con parmesano y rúgula.",
+        "precio": 28000
+      },
+      {
+        "nombre": "Caprese",
+        "descripcion": "Tomate, mozzarella y albahaca.",
+        "precio": 22000
+      },
+      {
+        "nombre": "Calamares Fritos",
+        "descripcion": "Con salsa marinara.",
+        "precio": 30000
+      }
+    ]
+  },
+  {
+    "categoria": "Sopas (Zuppe)",
+    "items": [
+      {
+        "nombre": "Minestrone",
+        "descripcion": "Sopa de verduras con pasta.",
+        "precio": 16000
+      },
+      {
+        "nombre": "Crema de Tomate",
+        "descripcion": "Con albahaca fresca.",
+        "precio": 15000
+      }
+    ]
+  },
+  {
+    "categoria": "Pastas",
+    "items": [
+      {
+        "nombre": "Spaghetti Bolognesa",
+        "descripcion": "Salsa de carne.",
+        "precio": 32000
+      },
+      {
+        "nombre": "Fettuccine Alfredo",
+        "descripcion": "Salsa cremosa de parmesano.",
+        "precio": 34000
+      },
+      {
+        "nombre": "Penne Arrabbiata",
+        "descripcion": "Salsa picante.",
+        "precio": 30000
+      },
+      {
+        "nombre": "Lasagna Tradicional",
+        "descripcion": "Carne y queso.",
+        "precio": 36000
+      },
+      {
+        "nombre": "Ravioli Ricotta y Espinaca",
+        "descripcion": "Mantequilla y salvia.",
+        "precio": 35000
+      }
+    ]
+  },
+  {
+    "categoria": "Pizzas",
+    "items": [
+      {
+        "nombre": "Margherita",
+        "descripcion": "Tomate y mozzarella.",
+        "precio": 28000
+      },
+      { "nombre": "Pepperoni", "descripcion": "Con queso.", "precio": 30000 },
+      {
+        "nombre": "Cuatro Quesos",
+        "descripcion": "Mezcla de quesos.",
+        "precio": 32000
+      },
+      {
+        "nombre": "Prosciutto e Funghi",
+        "descripcion": "Jamón y champiñones.",
+        "precio": 34000
+      }
+    ]
+  },
+  {
+    "categoria": "Platos Fuertes",
+    "items": [
+      {
+        "nombre": "Pollo Parmigiana",
+        "descripcion": "Con queso gratinado.",
+        "precio": 38000
+      },
+      {
+        "nombre": "Osso Buco",
+        "descripcion": "Ternera estofada.",
+        "precio": 48000
+      },
+      {
+        "nombre": "Salmón al Limón",
+        "descripcion": "A la plancha.",
+        "precio": 45000
+      },
+      {
+        "nombre": "Risotto de Champiñones",
+        "descripcion": "Arroz cremoso.",
+        "precio": 36000
+      }
+    ]
+  },
+  {
+    "categoria": "Ensaladas",
+    "items": [
+      {
+        "nombre": "Ensalada César",
+        "descripcion": "Pollo y crutones.",
+        "precio": 24000
+      },
+      {
+        "nombre": "Ensalada Mediterránea",
+        "descripcion": "Feta y aceitunas.",
+        "precio": 22000
+      }
+    ]
+  },
+  {
+    "categoria": "Postres",
+    "items": [
+      {
+        "nombre": "Tiramisú",
+        "descripcion": "Clásico italiano.",
+        "precio": 18000
+      },
+      {
+        "nombre": "Panna Cotta",
+        "descripcion": "Frutos rojos.",
+        "precio": 17000
+      },
+      {
+        "nombre": "Gelato Artesanal",
+        "descripcion": "Varios sabores.",
+        "precio": 15000
+      },
+      { "nombre": "Cannoli", "descripcion": "Ricotta dulce.", "precio": 19000 }
+    ]
+  },
+  {
+    "categoria": "Bebidas",
+    "items": [
+      {
+        "nombre": "Vinos Italianos (copa)",
+        "descripcion": "Tinto, blanco, rosado.",
+        "precio": 25000
+      },
+      { "nombre": "Limonada de la casa", "descripcion": "", "precio": 8000 },
+      { "nombre": "Café espresso", "descripcion": "", "precio": 6000 },
+      { "nombre": "Capuccino", "descripcion": "", "precio": 9000 },
+      { "nombre": "Gaseosas y agua", "descripcion": "", "precio": 5000 }
+    ]
+  }
+]
